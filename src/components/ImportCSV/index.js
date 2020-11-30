@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import * as XLSX from "xlsx";
 
+/* var QRCode = require("qrcode");
+
+QRCode.toDataURL("Student ID", function (err, url) {
+  console.log(url);
+}); */
+
 function ImportCSV() {
   const [items, setItems] = useState([]);
 
@@ -58,8 +64,8 @@ function ImportCSV() {
           {items.map((d) => (
             <tr key={d.Item}>
               <th>{d.ID}</th>
-              <td>{d.FirstName}</td>
-              <td>{d.LastName}</td>
+              <td>{d["First Name"]}</td>
+              <td>{d["Last Name"]}</td>
               <td>{d.Email}</td>
             </tr>
           ))}
@@ -68,5 +74,4 @@ function ImportCSV() {
     </div>
   );
 }
-
 export default ImportCSV;
