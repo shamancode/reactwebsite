@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import * as XLSX from "xlsx";
-
-/* var QRCode = require("qrcode");
-
-QRCode.toDataURL("Student ID", function (err, url) {
-  console.log(url);
-}); */
+import firebaseDb from "../../firebase";
+import "./ImportCSVElements.css";
 
 function ImportCSV() {
   const [items, setItems] = useState([]);
@@ -37,40 +33,30 @@ function ImportCSV() {
     promise.then((d) => {
       console.log(d);
       setItems(d);
+      d.forEach((item) => {
+        firebaseDb.child("contacts").push(item, (error) => {
+          if (error) console.log(error);
+        });
+      });
     });
   };
 
   return (
     <div>
+      <label for="file-upload" class="custom-file-upload">
+        {" "}
+        <i class="fa fa-cloud-upload"></i> Import Data{" "}
+      </label>
       <input
+        id="file-upload"
         type="file"
+        class="btn btn-success btn-block"
         onChange={(e) => {
           const file = e.target.files[0];
 
           readExcel(file);
         }}
       />
-
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          {items.map((d) => (
-            <tr key={d.Item}>
-              <th>{d.ID}</th>
-              <td>{d["First Name"]}</td>
-              <td>{d["Last Name"]}</td>
-              <td>{d.Email}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
     </div>
   );
 }
