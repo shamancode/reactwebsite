@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ContactForm from "./ContactFrom";
 import firebaseDb from "../firebase";
 import * as XLSX from "xlsx";
+import Demo from "./QRCode/index.js";
 
 const Contacts = () => {
   var [currentId, setCurrentId] = useState("");
@@ -80,6 +81,7 @@ const Contacts = () => {
                     >
                       <i className="far fa-trash-alt"></i>
                     </a>
+                    <Demo />
                   </td>
                 </tr>
               ))}
