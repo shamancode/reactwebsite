@@ -3,10 +3,10 @@ export const homeObjectOne = {
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
-  topLine: "Online Homework",
-  headline: "Easy Homework Submition",
+  topLine: "Online Classes",
+  headline: "Easy Online Classroom Invintation",
   description:
-    "Get acess to your exclusive app that allows you to send and submit work without any limit.",
+    "Get acess to your exclusive app that allows you to send QR online classroom invintation straight to students thought email using the database with easy student import.",
   buttonLabel: "Get Started",
   imgStart: false,
   img: "/images/svg-1.svg",
@@ -24,7 +24,7 @@ export const homeObjectTwo = {
   topLine: "Online Homework",
   headline: "Services",
   description:
-    "Get acess to our exclusive app that allows you to send and submit work without any limit.",
+    "Get acess to our exclusive app that allows you to keep track of multiple classrooms an once with easy edit and manage functions.",
   buttonLabel: "Get Started",
   imgStart: true,
   img: "/images/svg-2.svg",

@@ -40,6 +40,12 @@ export const Icon = styled(Link)`
     margin-left: 16px;
     margin-top: 8px;
   }
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
 `;
 
 export const FormContent = styled.div`

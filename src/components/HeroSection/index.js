@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 import Video from "../../videos/video.mp4";
 import { Button } from "../ButtonElements";
 import {
@@ -26,15 +27,19 @@ const HeroSection = () => {
         <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
       </HeroBg>
       <HeroContent>
-        <HeroH1>Classroom Work Simplified</HeroH1>
-        <HeroP>Sign up for easy classwork managment.</HeroP>
+        <HeroH1>Online Classroom Simplified</HeroH1>
+        <HeroP>
+          Get started right now with easy student managment and classroom
+          database invintations though QR code.{" "}
+        </HeroP>
         <HeroBtnWrapper>
           <Button
-            to="/importcsv"
+            to="/projects"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary="true"
-            dark="true"
+            dark="true
+            "
           >
             Get started {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>

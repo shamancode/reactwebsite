@@ -2,7 +2,7 @@ input[type="file"] {
   display: none;
 }
 .custom-file-upload {
-  border-radius: 50px;
+  border-radius: 5px;
   background: #0275d8;
   white-space: nowrap;
   padding: 10px 22px;
@@ -13,5 +13,6 @@ input[type="file"] {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  float: right;
+  display: block;
+  text-align: center;
 }

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ContactForm from "./ContactFrom";
 import firebaseDb from "../firebase";
-import * as XLSX from "xlsx";
 import Demo from "./QRCode/index.js";
+import ImportCSV from "../components/ImportCSV";
+import "./listgroupcolor.css";
 
 const Contacts = () => {
   var [currentId, setCurrentId] = useState("");
@@ -47,6 +48,8 @@ const Contacts = () => {
           <ContactForm
             {...{ currentId, contactObjects, addOrEdit }}
           ></ContactForm>
+
+          <ImportCSV />
         </div>
         <div className="col-md-7">
           <table className="table table-borderless table-stripped">
@@ -61,12 +64,12 @@ const Contacts = () => {
             <tbody>
               {Object.keys(contactObjects).map((key) => (
                 <tr key={key}>
-                  <td>{contactObjects[key].fullName}</td>
-                  <td>{contactObjects[key].mobile}</td>
-                  <td>{contactObjects[key].email}</td>
-                  <td className="bg-light">
+                  <td className="bg-light ">{contactObjects[key].fullName}</td>
+                  <td className="bg-light ">{contactObjects[key].mobile}</td>
+                  <td className="bg-light ">{contactObjects[key].email}</td>
+                  <td className="bg-light ">
                     <a
-                      className="btn text-dark"
+                      className="btn text-dark "
                       onClick={() => {
                         setCurrentId(key);
                       }}

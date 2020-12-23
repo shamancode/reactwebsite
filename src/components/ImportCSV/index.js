@@ -45,7 +45,7 @@ function ImportCSV() {
     <div>
       <label for="file-upload" class="custom-file-upload">
         {" "}
-        <i class="fa fa-cloud-upload"></i> Import Data{" "}
+        <i class="fa fa-cloud-upload"></i> Import Data From CSV{" "}
       </label>
       <input
         id="file-upload"

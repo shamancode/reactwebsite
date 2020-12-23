@@ -1,0 +1,11 @@
+.dark-bg {
+  background-color: rgb(255, 255, 255);
+}
+
+.black-border {
+  border: 3px solid #010606;
+}
+
+.rounded-corner {
+  border-radius: 25px;
+}

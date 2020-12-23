@@ -45,7 +45,7 @@ class GoogleBtn extends Component {
 
   render() {
     return (
-      <div data-width="1000">
+      <div data-width="1000" style={{ margin: "auto" }}>
         {this.state.isLogined ? (
           <GoogleLogout
             clientId={CLIENT_ID}
